@@ -1,0 +1,96 @@
+html, body {
+    height: 100%;
+}
+
+.maincontainer {
+    position: relative;
+    min-height: 100%;
+    text-align: center;
+}
+
+.container {
+    width : 80%;
+    margin:auto;
+    padding-top:20px;
+    padding-bottom:60px;   /* Height of the footer */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: #0b97c4;
+}
+
+header {
+    background-color:lightgray;
+    height: 60px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    padding-top: 12px;
+}
+
+ul.trow li{
+    display: inline-block;
+}
+
+div.table{
+    text-align: left;
+    width: 100%;
+}
+
+ul.trow {
+    border-bottom: 1px solid lightgray;
+    list-style:none;
+    padding: 10px 0;
+    margin: 0;
+}
+
+ul.thead {
+    border-bottom: 2px solid gray;
+    font-weight: bold;
+}
+
+ul.thead li{
+    font-size: 1.2em;
+    color: #0b97c4;
+    cursor: pointer;
+}
+
+ul.promotion {
+    background-color:yellow;
+}
+
+footer {
+    margin-top:30px;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: lightgray;
+    position: absolute;
+}
+
+@media screen and (min-width: 769px){
+    .col-8 {width: 65%;}
+    .col-2 {width: 15%;}
+}
+
+@media screen and (min-width: 321px) and (max-width: 768px){
+    .col-8 {width: 65%;}
+    .col-2 {width: 30%;}
+    ul.trow li{
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .col-8 {width: 100%;}
+    .col-2 {width: 100%;}
+    ul.trow li{
+        margin-bottom: 10px;
+    }
+}   
