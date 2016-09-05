@@ -49,26 +49,37 @@ var sortByElement = function (sortBy) {
     if (globalData.selectedGridData.length != 0) data = globalData.selectedGridData;
     else data = globalData.gridData;
 
-    if (!sortBy) {
-        if (!sessionStorage.sort) {
-            //First time page load, set to defaults
+    if (sessionStorage){
+        if (!sortBy) {
+            if (!sessionStorage.sort) {
+                //First time page load, set to defaults
+                sortBy = 'title';
+                reverse = false;
+                sessionStorage.setItem('sort', JSON.stringify({'sortBy': sortBy, 'reverse': reverse}));
+            } else {
+                //Next time page load, get from session Storage
+                sort = JSON.parse(sessionStorage.getItem('sort'));
+                sortBy = sort.sortBy;
+                reverse = sort.reverse;
+            }
+        } else {
+            //Store in session Storage
+            if (sessionStorage.sort) {
+                sort = JSON.parse(sessionStorage.getItem('sort'));
+                reverse = !sort.reverse;
+            }else reverse = false;
+            sessionStorage.setItem('sort', JSON.stringify({'sortBy': sortBy, 'reverse': reverse}));
+        }
+    }else {
+        //For IE, without a webserver, doesn't support sessionStorage
+        if (!sortBy) {
             sortBy = 'title';
             reverse = false;
-            sessionStorage.setItem('sort', JSON.stringify({'sortBy': sortBy, 'reverse': reverse}));
-        } else {
-            //Next time page load, get from session Storage
-            sort = JSON.parse(sessionStorage.getItem('sort'));
-            sortBy = sort.sortBy;
-            reverse = sort.reverse;
+        }else {
+            reverse = !reverse;
         }
-    } else {
-        //Store in session Storage
-        if (sessionStorage.sort) {
-            sort = JSON.parse(sessionStorage.getItem('sort'));
-            reverse = !sort.reverse;
-        }else reverse = false;
-        sessionStorage.setItem('sort', JSON.stringify({'sortBy': sortBy, 'reverse': reverse}));
     }
+
 
     //clear class name from other headers
     var sortIcons = document.getElementsByClassName('sorticon');
