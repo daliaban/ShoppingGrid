@@ -13,15 +13,23 @@
         <h1>Shopping Grid</h1>
     </header>
     <div class="container">
+        <div class="filter">
+            <label for="filterby">Filter by Title:</label>
+            <select id="filterby" name="filterby" class="form-control" onchange="filterByValue(this)">
+                <option value="">Select Filter</option>
+
+            </select>
+            <button onclick="clearFilter()">Clear Filter</button>
+        </div>
         <div class="table">
             <ul class="trow thead">
                 <li onClick="sortByElement('title');" class="col-8">
-                    Title &nbsp;<span id="title" class="sorticon"></span>
+                    Title &nbsp;<span id="title" class="sorticon fa"></span>
                 </li>
                 <li onClick="sortByElement('price');" class="col-2">
-                    Price &nbsp;<span id="price" class="sorticon"></span>
+                    Price &nbsp;<span id="price" class="sorticon fa"></span>
                 </li>
-                <li id="stars" class="col-2">
+                <li style="cursor: default;" class="col-2">
                     Stars &nbsp;<span class="fa"></span>
                 </li>
             </ul>

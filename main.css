@@ -12,7 +12,7 @@ html, body {
     width : 80%;
     margin:auto;
     padding-top:20px;
-    padding-bottom:60px;   /* Height of the footer */
+    padding-bottom:50px;   /* Height of the footer */
 }
 
 * {
@@ -31,7 +31,7 @@ header {
 
 header h1 {
     margin: 0;
-    padding-top: 12px;
+    padding-top: 10px;
 }
 
 ul.trow li{
@@ -74,6 +74,23 @@ footer {
     position: absolute;
 }
 
+.filter {
+    margin-bottom: 10px;
+}
+
+.form-control{
+    border-radius: 2px;
+    background-color: white;
+    padding: 5px;
+}
+
+button {
+    padding: 5px 10px;
+    border: 1px solid lightgray;
+    background-color: lightblue;
+    border-radius: 2px;
+}
+
 @media screen and (min-width: 769px){
     .col-8 {width: 65%;}
     .col-2 {width: 15%;}
@@ -85,12 +102,24 @@ footer {
     ul.trow li{
         margin-bottom: 10px;
     }
+    select#filterby{
+        max-width: 100%;
+        margin: 5px 0;
+    }
 }
 
 @media screen and (max-width: 320px){
+    .container {
+        width: 90%;
+    }
     .col-8 {width: 100%;}
     .col-2 {width: 100%;}
     ul.trow li{
         margin-bottom: 10px;
+    }
+
+    select#filterby{
+        max-width: 100%;
+        margin: 5px 0;
     }
 }   
