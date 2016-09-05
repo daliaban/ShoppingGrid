@@ -15,9 +15,9 @@ var loadGrid = function (data) {
             html += '<ul class="trow">';
         }
 
-        html += '<li class="col-8">' + elm.title +
+        html += '<li class="col-1">' + elm.title +
             '</li><li class="col-2">' + (elm.price || "£0.00") +
-            '</li><li class="col-2">' + (elm.stars || "") + '</li></ul>';
+            '</li><li class="col-3">' + (elm.stars || "") + '</li></ul>';
     }
 
     tableElm.innerHTML = html;
@@ -75,11 +75,8 @@ var sortByElement = function (sortBy) {
         if (!sortBy) {
             sortBy = 'title';
             reverse = false;
-        }else {
-            reverse = !reverse;
         }
     }
-
 
     //clear class name from other headers
     var sortIcons = document.getElementsByClassName('sorticon');
@@ -96,7 +93,6 @@ var sortByElement = function (sortBy) {
     //Add class name to sorted field
     if (reverse) sortElm.className += ' fa-caret-down';
     else sortElm.className += ' fa-caret-up';
-
 };
 
 //Dynamically populate the Filter by Title select list

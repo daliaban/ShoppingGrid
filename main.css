@@ -92,13 +92,15 @@ button {
 }
 
 @media screen and (min-width: 769px){
-    .col-8 {width: 65%;}
-    .col-2 {width: 15%;}
+    .col-1 {width: 65%;}
+    .col-2 {width: 16%;}
+    .col-3 {width: 16%;}
 }
 
 @media screen and (min-width: 321px) and (max-width: 768px){
-    .col-8 {width: 65%;}
-    .col-2 {width: 30%;}
+    .col-1 {width: 49.5%;}
+    .col-2 {width: 49.5%;}
+    .col-3 {width: 100%;}
     ul.trow li{
         margin-bottom: 10px;
     }
@@ -112,8 +114,9 @@ button {
     .container {
         width: 90%;
     }
-    .col-8 {width: 100%;}
+    .col-1 {width: 100%;}
     .col-2 {width: 100%;}
+    .col-3 {width: 100%;}
     ul.trow li{
         margin-bottom: 10px;
     }
