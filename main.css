@@ -98,8 +98,8 @@ button {
 }
 
 @media screen and (min-width: 321px) and (max-width: 768px){
-    .col-1 {width: 49.5%;}
-    .col-2 {width: 49.5%;}
+    .col-1 {width: 49%;}
+    .col-2 {width: 49%;}
     .col-3 {width: 100%;}
     ul.trow li{
         margin-bottom: 10px;
