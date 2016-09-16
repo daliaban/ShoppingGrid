@@ -15,18 +15,18 @@
     <div class="container">
         <div class="filter">
             <label for="filterby">Filter by Title:</label>
-            <select id="filterby" name="filterby" class="form-control" onchange="filterByValue(this)">
+            <select id="filterby" name="filterby" class="form-control" onchange="app.filterByValue(this)">
                 <option value="">Select Filter</option>
 
             </select>
-            <button onclick="clearFilter()">Clear Filter</button>
+            <button onclick="app.clearFilter()">Clear Filter</button>
         </div>
         <div class="table">
             <ul class="trow thead">
                 <!-- http://georgemauer.net/2015/10/18/why-width-50-percent-wont-be-side-by-side.html -->
-                <li onClick="sortByElement('title');" class="col-1">
+                <li onClick="app.sortByElement('title');" class="col-1">
                     Title &nbsp;<span id="title" class="sorticon fa"></span>
-                </li><li onClick="sortByElement('price');" class="col-2">
+                </li><li onClick="app.sortByElement('price');" class="col-2">
                     Price &nbsp;<span id="price" class="sorticon fa"></span>
                 </li><li style="cursor: default;" class="col-3">
                     Stars &nbsp;<span class="fa"></span>
